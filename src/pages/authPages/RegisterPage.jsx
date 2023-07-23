@@ -1,5 +1,15 @@
+import RegisterForm from 'components/RegisterForm/RegisterForm';
+
+import { RegisterBackground, RegisterBorder } from './RegisterPage.styled';
+
 const RegisterPage = () => {
-  return <p>RegisterPage</p>;
+  return (
+    <RegisterBackground>
+      <RegisterBorder>
+        <RegisterForm />
+      </RegisterBorder>
+    </RegisterBackground>
+  );
 };
 
 export default RegisterPage;
