@@ -7,8 +7,7 @@ import ImagePlaceholder from '../../images/OurFriendsPageImages/images_placehold
 
 const OurFriends = () => {
    
-const first = friends[0].workDays[0]
-console.log(first);
+
 return(
 
     <List>
