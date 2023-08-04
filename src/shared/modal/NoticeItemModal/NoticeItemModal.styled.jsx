@@ -8,13 +8,21 @@ export const ModalContainer = styled.div`
   flex-direction: column;
   gap: 28px;
   left: 50%;
-  max-width: 50vw;
-  padding: 32px;
-  position: fixed;
-  top: 50%;
+  /* max-width: 50vw; */
+  /* padding: 32px; */
+  position: absolute;
+  /* top: 50%; */
   transform: translate(-50%, -50%);
   width: 80%;
   z-index: 11;
+  @media screen and (max-width: 767.5px) {
+    width: 280px;
+    height: 786px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 32px;
+    top: 50%;
+  }
 `;
 
 export const CloseButton = styled.button`

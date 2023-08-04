@@ -13,13 +13,19 @@ const Modal = ({ isOpen, handleClose, children }) => {
         return null;
     }
 
+    const handleBackdropClick = e => {
+        if (e.currentTarget === e.target) {
+            handleClose();
+        }
+      };
+
     return (
         <>
-            <ModalContainer>
+            <ModalContainer >
                 {children}
                 <CloseButton onClick={handleClose}> {ListIcons(null, 'IconPlus')}</CloseButton>
             </ModalContainer>
-            <Backdrop />
+            <Backdrop onClick={handleBackdropClick}/>
         </>
     );
 };
