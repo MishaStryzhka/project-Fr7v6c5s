@@ -14,6 +14,7 @@ export const StyledNavLink = styled(NavLink)`
   font-weight: 500;
   line-height: normal;
   letter-spacing: 1.28px;
+  transition: text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &.active {
     color: ${({ dark, theme }) =>
@@ -52,7 +53,6 @@ export const NavContainer = styled.nav`
     box-shadow: none;
     display: flex;
     column-gap: 40px;
-    // grid-template-columns: 1fr 1fr 1fr;
     top: 0;
     position: relative;
     margin-left: 159px;

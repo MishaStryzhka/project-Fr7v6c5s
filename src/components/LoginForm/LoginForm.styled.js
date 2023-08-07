@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { Form, Field } from 'formik';
-import IconCross from 'images/icons/IconCross';
+
 
 export const FormStyled = styled(Form)`
   width: 280px;
@@ -68,7 +68,7 @@ export const FieldStyled = styled(Field)`
         ? theme.color.indicator
         : theme.color.btnDark};
   outline: none;
-  color: #888;
+  color: ${({ theme }) => theme.color.btnLogOut};
   @media screen and (min-width: 768px) {
     width: 448px;
   }
@@ -114,6 +114,8 @@ export const Button = styled.button`
 
   color: ${({ theme }) => theme.color.background};
   background-color: ${({ theme }) => theme.color.btnDark} !important;
+
+
   :hover {
     background: ${({ theme }) => theme.color.gradient} !important;
   }
@@ -161,12 +163,6 @@ export const SuccessText = styled.div`
   line-height: 1.3;
   font-weight: 400;
   color: ${({ theme }) => theme.color.indicator};
-`;
-
-export const IconCrossStyle = styled(IconCross)`
-  position: absolute;
-  top: 12px;
-  right: 16px;
 `;
 
 export const WrapIcons = styled.div`

@@ -6,7 +6,7 @@ export const Title = styled.h2`
   line-height: 1.37;
   margin-bottom: 24px;
   margin-left: 20px;
-  color: #111111;
+  color: ${({ theme }) => theme.color.secondary};
 
   @media screen and (min-width: 768px) {
     font-size: 28px;
@@ -37,7 +37,7 @@ export const InputContainer = styled.div`
 
 export const Label = styled.label`
   font-family: Manrope;
-  color: #111111;
+  color: ${({ theme }) => theme.color.secondary};
   font-weight: 500;
   font-size: 14px;
   line-height: 1.36;
@@ -50,14 +50,14 @@ export const Label = styled.label`
 export const Input = styled.input`
   font-family: Manrope;
   border-radius: 40px;
-  color: #888888;
+  color:${({ theme }) => theme.color.btnLogOut};
   font-size: 14px;
   padding: 9.5px 16px;
-  border: 1px solid #54adff;
+  border: 1px solid ${({ theme }) => theme.color.btnDark};
   max-width: 260px;
 
   &:focus {
-    border-color: #00c3ad;
+    border-color:${({ theme }) => theme.color.indicator};
   }
 
   @media screen and (min-width: 768px) {
@@ -75,5 +75,5 @@ export const ErrorText = styled.p`
   font-weight: 400;
   font-size: 10px;
   line-height: 1.36px;
-  color: #f43f5e;
+  color: ${({ theme }) => theme.color.error};
 `;

@@ -16,7 +16,6 @@ const Btn = styled.button`
   box-sizing: border-box;
 
   width: 40px;
-  // height: 40px;
   padding: 8px;
 
   background-color: ${({ theme, isOpen, age, gender }) =>
@@ -34,8 +33,7 @@ const Btn = styled.button`
 
     width: 100%;
     height: 100%;
-
-    background: linear-gradient(290.46deg, #419ef1 0%, #9bd0ff 107.89%);
+    background: linear-gradient(290.46deg,  #419ef1 0%, #9bd0ff 107.89%);
     border-radius: 40px;
     opacity: ${({ isOpen, age, gender }) =>
       isOpen || age !== '' || gender !== '' ? 1 : 0};
@@ -51,7 +49,7 @@ const Btn = styled.button`
     font-family: Manrope;
     font-weight: 700;
     font-size: 16px;
-    color: ${({ theme, isOpen }) => (isOpen ? '#FDF7F2' : theme.color.btnDark)};
+    color: ${({ theme, isOpen }) => (isOpen ? theme.color.background : theme.color.btnDark)};
 
     background-color: transparent;
     border-width: 2px;
@@ -59,7 +57,7 @@ const Btn = styled.button`
     border-radius: 40px;
     border-style: solid;
     color: ${({ age, gender, theme, isOpen }) =>
-      age !== '' || gender !== '' || isOpen ? '#FDF7F2' : theme.color.btnDark};
+      age !== '' || gender !== '' || isOpen ? theme.color.background : theme.color.btnDark};
     background: ${({ age, gender }) =>
       age !== '' || gender !== ''
         ? 'linear-gradient(290.46deg, #419ef1 0%, #9bd0ff 107.89%)'
@@ -83,7 +81,7 @@ const Filters = styled.div`
     isOpen ? filtersHeight(isAgeMenuOpen, isGenderMenuOpen) : '0px'};
   padding: 8px;
 
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.color.cardBG};
   border-radius: 20px;
 
   opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};

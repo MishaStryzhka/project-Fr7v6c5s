@@ -23,19 +23,12 @@ export const StyledAppBar = styled.header`
 
 export const StyledContainer = styled(Container)`
   box-sizing: border-box;
-  // background-color: red;
-  // margin: 20px 20px;
   padding: 0 20px;
-  // background-color: ${({ theme }) => theme.color.background};
-  // height: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   z-index: 9;
-
-  // background: ${({ theme }) => theme.color.gradient};
-  // box-shadow: ${({ theme }) => theme.boxShadowHover};
 
   @media screen and (min-width: 768px) {
     padding: 0 32px;
@@ -68,8 +61,7 @@ export const NavContainer = styled.div`
       `};
 
   background-color: ${({ theme }) => theme.color.bodyColor};
-  // height: 1px;
-  // background-color: red;
+  
 
   @media screen and (min-width: 768px) {
     top: -32px;
@@ -77,21 +69,17 @@ export const NavContainer = styled.div`
   }
 
   @media screen and (min-width: 1280px) {
-    // height: 28px;
     flex-direction: row;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    // align-content: space-between;
-    // width: 100vw;
   }
 `;
 
 export const UserBox = styled.div`
   display: flex;
   align-items: center;
-  // row-gap: 24px;
   column-gap: 24px;
 `;
 
@@ -105,14 +93,12 @@ export const ButtonMenu = styled.button`
 
   width: 24px;
   height: 24px;
-
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
   &:hover {
     box-shadow: ${({ theme }) => theme.boxShadow};
     cursor: pointer;
   }
-
-  // background: ${({ theme }) => theme.color.gradient};
-  // box-shadow: ${({ theme }) => theme.boxShadowHover};
 
   @media screen and (min-width: 768px) {
     margin-left: 24px;

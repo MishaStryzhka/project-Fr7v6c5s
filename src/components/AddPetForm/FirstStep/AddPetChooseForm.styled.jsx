@@ -6,7 +6,7 @@ export const Title = styled.h2`
   line-height: 1.37;
   margin-bottom: 24px;
   margin-left: 20px;
-  color: #111111;
+  color: ${({ theme }) => theme.color.secondary};
 
   @media screen and (min-width: 768px) {
     font-size: 28px;

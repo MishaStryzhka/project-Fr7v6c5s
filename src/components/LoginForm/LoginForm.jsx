@@ -12,7 +12,8 @@ import IconEyeClosed from 'images/icons/IconEyeClosed'
 import IconEyeOpen from 'images/icons/IconEyeOpen';
 import IconCross from 'images/icons/IconCross';
 import Notiflix from 'notiflix';
-import { Button, FieldStyled, FormStyled, IconCrossStyle, Label, StyledNavLink, SuccessText, Text, TextError, Title, Wrap, WrapIcons } from './LoginForm.styled';
+import { Button, FieldStyled, FormStyled, Label, StyledNavLink,
+   SuccessText, Text, TextError, Title, Wrap, WrapIcons } from './LoginForm.styled';
 import Loader from 'components/Loader/Loader';
 
 
@@ -96,7 +97,7 @@ return(
                 onBlur={handleBlur}
                 placeholder='Email'
                 required/>
-              {errors.email && touched.email && errors.email  && <IconCrossStyle fill={theme[currentTheme].color.error}/>}
+              {errors.email && touched.email && errors.email  && <WrapIcons><IconCross fill={theme[currentTheme].color.error}/></WrapIcons>}
               {values.email && !errors.email &&  <WrapIcons><IconCheck fill={theme[currentTheme].color.indicator}/></WrapIcons>}
               <TextError>{errors.email && touched.email && errors.email}</TextError>
           </Label>

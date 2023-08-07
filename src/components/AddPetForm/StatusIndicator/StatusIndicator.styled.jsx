@@ -20,7 +20,7 @@ export const StatusOption = styled.li`
   font-weight: 500;
   padding-bottom: 20px;
   letter-spacing: 0.04em;
-  color: #888888;
+  color: ${({ theme }) => theme.color.btnLogOut};
   width: 85px;
   max-width: 120px;
 
@@ -31,7 +31,7 @@ export const StatusOption = styled.li`
   &::after {
     position: absolute;
     content: '';
-    background-color: #cce4fb;
+    background-color: ${({ theme }) => theme.color.btnLight};
     width: 85px;
     height: 8px;
     border-radius: 8px;

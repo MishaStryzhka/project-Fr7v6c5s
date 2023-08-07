@@ -8,7 +8,7 @@ export const Wrap = styled.div`
   padding-bottom: 20px;
   border-radius: 20px;
   background: ${p => p.theme.color.cardBG};
-  box-shadow: 3px 8px 14px 0px rgba(136, 198, 253, 0.19);
+  box-shadow:${({theme}) => theme.boxShadow};
   @media screen and (min-width: 768px) {
     margin-top: 24px;
     display: flex;
@@ -157,6 +157,8 @@ export const StyledLabel = styled.label`
   text-align: center;
   @media screen and (min-width: 768px) {
     bottom: 37px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   &:hover {
     color: ${({ theme }) => theme.color.gradient};
@@ -188,6 +190,7 @@ export const StyledBtnFile = styled.button`
   border: none;
   fill: inherit;
   box-shadow: ${({ theme }) => theme.boxShadow};
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     box-shadow: ${({ theme }) => theme.boxShadowHover};
   }

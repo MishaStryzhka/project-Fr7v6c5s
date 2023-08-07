@@ -37,13 +37,13 @@ export const Top = styled.div`
 `;
 
 export const Status = styled.div`
-  background: #cce4fb;
+  background:${({ theme }) => theme.color.btnLight} ;
   border-radius: 0 12px 12px 0;
   padding: 10px 15px 10px 8px;
   position: relative;
 
   &::after {
-    background: #cce4fb;
+    background:${({ theme }) => theme.color.btnLight};
     bottom: 0;
     content: '';
     left: -10px;
@@ -54,7 +54,7 @@ export const Status = styled.div`
 `;
 
 export const Favorite = styled.button`
-  background: #cce4fb;
+  background: ${({ theme }) => theme.color.btnLight};
   border: none;
   border-radius: 50%;
   display: flex;
@@ -66,9 +66,9 @@ export const Favorite = styled.button`
 
   &:hover {
     cursor: pointer;
-    background: ${({ isFavorite }) => (isFavorite ? '#54adff' : '#cce4fb')};
+    background: ${({ isFavorite, theme }) => (isFavorite ? theme.color.btnDark : theme.color.btnLight )};
     > svg {
-      fill: ${({ isFavorite }) => (isFavorite ? 'white' : '#54adff')};
+      fill: ${({ isFavorite, theme }) => (isFavorite ? theme.color.cardBG : theme.color.btnDark)};
     }
   }
 `;
@@ -80,7 +80,7 @@ export const Information = styled.div`
 
 export const BtnStyled = styled.a`
   background: ${props => props.bg ?? 'transparent'};
-  border: 2px solid #54adff;
+  border: 2px solid ${({ theme }) => theme.color.btnDark};
   border-radius: 40px;
   color: ${props => props.color ?? '#fff'};
   letter-spacing: 0.04em;
@@ -105,7 +105,7 @@ export const InformationItem = styled.div`
   font-size: 12px;
   font-weight: 600;
   align-items: center;
-  background: #cce4fb;
+  background:${({ theme }) => theme.color.btnLight};
   border-radius: 16px;
   display: flex;
   gap: 4px;
@@ -131,9 +131,9 @@ export const Footer = styled.div`
 
 export const LearnMore = styled.button`
   background: transparent;
-  border: 2px solid #54adff;
+  border: 2px solid ${({ theme }) => theme.color.btnDark};
   border-radius: 40px;
-  color: #54adff;
+  color: ${({ theme }) => theme.color.btnDark};
   padding: 8px 0;
 `;
 
@@ -149,9 +149,9 @@ export const ModalPhoto = styled.div`
 `;
 
 export const ModalStatus = styled.span`
-  background: #cce4fb;
+  background: ${({ theme }) => theme.color.btnLight};
   border-radius: 0 12px 12px 0;
-  color: #111;
+  color: ${({ theme }) => theme.color.secondary};
   left: 0;
   padding: 12px;
   position: absolute;
@@ -184,7 +184,7 @@ export const ModalPersonalityValue = styled.p`
 `;
 
 export const ModalPersonalityLink = styled.a`
-  color: #ffc107;
+  color:${({ theme }) => theme.color.primary};
 `;
 
 export const ModalComments = styled.div`
@@ -200,7 +200,7 @@ export const ModalButtons = styled.div`
 export const DeletePet = styled.button`
   display: block;
   fill: transparent;
-  stroke: #54adff;
+  stroke: ${({ theme }) => theme.color.btnDark};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,15 +208,15 @@ export const DeletePet = styled.button`
   width: 40px;
   align-self: flex-end;
 
-  background: #cce4fb;
+  background: ${({ theme }) => theme.color.btnLight};
   border: transparent;
   border-radius: 50%;
 
   cursor: pointer;
   &:hover {
-    background: #54adff;
+    background: ${({ theme }) => theme.color.btnDark};
     > svg {
-      fill: white;
+      fill: ${({ theme }) => theme.color.cardBG};
     }
   }
 `;

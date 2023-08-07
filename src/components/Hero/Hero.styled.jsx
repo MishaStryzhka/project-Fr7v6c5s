@@ -55,7 +55,7 @@ export const Background = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
-  background-attachment: fixed
+  background-attachment: fixed;
 
   background-image: url(${bg_sm_1x});
 
@@ -104,7 +104,6 @@ export const BackgroundMainPage = styled.div`
   background-size: cover, cover;
   background-position: bottom, center;
   background-repeat: no-repeat;
-  // height: 100%;
   flex-grow: 3;
 
   background-image: url(${mb_bg_1x});

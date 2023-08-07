@@ -25,6 +25,7 @@ export const StyledNavLink = styled(NavLink)`
   font-weight: 600;
   line-height: normal;
   letter-spacing: 0.64px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
     box-shadow: ${({ theme }) => theme.boxShadow};
@@ -68,7 +69,6 @@ export const AuthNavContainer = styled.nav`
   }
 
   @media screen and (min-width: 1280px) {
-    // width: 1280px;
     display: flex;
     column-gap: 20px;
   }

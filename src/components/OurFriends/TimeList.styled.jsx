@@ -10,6 +10,7 @@ line-height: normal;
 color: ${({ theme }) => theme.color.secondary};
 outline: none;
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 :hover{
     color: ${({ theme }) => theme.color.btnDark}
 }

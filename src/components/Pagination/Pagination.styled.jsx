@@ -19,7 +19,7 @@ export const PaginationList = styled.ul`
   justify-content: center;
   align-items: center;
   gap: 8px;
-  box-shadow: gray;
+  box-shadow: ${({ theme }) => theme.color.btnLogOut};
   border-radius: 45px;
   padding: 8px 16px 9px 14px;
   width: 280px;
@@ -35,7 +35,7 @@ export const PaginationListItem = styled.li``;
 export const PaginationBtn = styled.button`
   outline: none;
   border: 1px solid lightblue;
-  color: black;
+  color:${({ theme }) => theme.color.secondary};
   background-color: transparent;
   display: inline-flex;
   width: 35px;
@@ -45,25 +45,31 @@ export const PaginationBtn = styled.button`
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
   &:hover,
   :focus {
-    color: white;
-    background-color: #54adff;
+    color: ${({ theme }) => theme.color.cardBG};
+    background-color: ${({ theme }) => theme.color.btnDark};
   }
 `;
 
 export const PaginationBtnActive = styled(PaginationBtn)`
-  border-color: #54adff;
-  background-color: #54adff;
-  color: white;
+  border-color: ${({ theme }) => theme.color.btnDark};
+  background-color: ${({ theme }) => theme.color.btnDark};
+  color:${({ theme }) => theme.color.cardBG};
 `;
 
 export const PaginationArrowBtn = styled(PaginationBtn)`
-  color: #54adff;
-  border-color: #54adff;
+  color: ${({ theme }) => theme.color.btnDark};
+  border-color: ${({ theme }) => theme.color.btnDark};
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
   &:hover,
   :focus {
-    color: white;
-    background-color: #54adff;
+    color:${({ theme }) => theme.color.cardBG};
+    background-color:${({ theme }) => theme.color.btnDark};
   }
 `;

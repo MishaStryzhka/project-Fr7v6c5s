@@ -57,6 +57,8 @@ export const StyleBtn = styled.button`
 
   border-radius: 40px;
   border: 2px solid ${({ theme }) => theme.color.btnDark};
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   ${({ theme, transparent }) =>
     !transparent
@@ -64,7 +66,7 @@ export const StyleBtn = styled.button`
       : `color: ${theme.color.btnDark}; background-color: transparent;`};
 
   &:hover {
-    background: ${({ theme }) => theme.color.gradient};
+    background-color: ${({ theme }) => theme.color.gradient};
     color: ${({ theme }) => theme.color.background};
   }
 `;

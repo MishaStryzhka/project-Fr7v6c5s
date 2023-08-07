@@ -24,9 +24,7 @@ export const Container = styled.div`
 `;
 export const Title = styled.h2`
   font-size: 20px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 0.8px;
   @media screen and (min-width: 768px) {
     font-size: 28px;
@@ -36,8 +34,9 @@ export const WrapItem = styled.li`
   position: relative;
   margin-top: 30px;
   border-radius: 20px;
-  background: var(--unnamed, #fff);
-  box-shadow: 3px 8px 14px 0px rgba(136, 198, 253, 0.19);
+  /* background: var(--unnamed, #fff); */
+  background-color: ${({ theme }) => theme.color.cardBG};
+  box-shadow: ${({ theme }) => theme.boxShadow};
 
   @media screen and (min-width: 768px) {
     height: 256px;

@@ -121,8 +121,9 @@ font-size: 12px;
 font-weight: 400;
 line-height: normal;
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 :hover{
-    color: ${({ theme }) => theme.color.btnDark}
+    color: ${({ theme }) => theme.color.btnDark};
 }
 @media screen and (min-width: 768px) {
     font-size: 14px;
