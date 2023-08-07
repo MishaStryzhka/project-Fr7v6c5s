@@ -44,7 +44,6 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // align-items: flex-start;
   gap: 16px;
 
   border-radius: 20px;
@@ -93,13 +92,11 @@ export const CardInfoContainer = styled.div`
 `;
 
 export const Description = styled.div`
-  // height: 100%;
   display: flex;
   flex-direction: column;
   row-gap: 16px;
 
   padding: 0 12px;
-  // box-sizing: border-box;
 `;
 
 export const CardTitle = styled.h2`
@@ -116,7 +113,7 @@ export const CardTitle = styled.h2`
 
 export const CardText = styled.p`
   text-overflow: ellipsis;
-  whitespace: nowrap;
+  white-space: nowrap;
   font-family: Manrope;
   font-size: 16px;
   font-style: normal;

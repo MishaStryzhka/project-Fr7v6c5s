@@ -29,6 +29,7 @@ export const BtnNavLink = styled(NavLink)`
   border-radius: 40px;
 
   background: ${({ theme }) => theme.color.btnLight};
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &.active {
     background: ${({ theme }) => theme.color.btnDark};
@@ -38,9 +39,4 @@ export const BtnNavLink = styled(NavLink)`
   &:hover {
     box-shadow: ${({ theme }) => theme.boxShadow};
   }
-
-  //   &:hover {
-  //     background: ${({ theme }) => theme.color.gradient};
-  //     color: ${({ theme }) => theme.color.background};
-  //   }
 `;

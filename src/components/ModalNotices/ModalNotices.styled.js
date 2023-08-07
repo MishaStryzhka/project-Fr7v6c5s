@@ -142,7 +142,7 @@ export const ModalPersonalityValue = styled.p`
 `;
 
 export const ModalPersonalityLink = styled.a`
-  color: #ffc107;
+  color: ${({ theme }) => theme.color.primary};
 `;
 
 export const ModalComments = styled.div`
@@ -220,6 +220,7 @@ export const BtnContacts = styled.a`
   width: 256px;
   text-decoration: none;
   text-align: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
     background: ${({ theme }) => theme.color.gradient};

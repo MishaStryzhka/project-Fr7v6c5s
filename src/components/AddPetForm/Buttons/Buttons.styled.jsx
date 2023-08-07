@@ -15,11 +15,13 @@ export const LabelStyled = styled.label`
   margin-bottom: 12px;
   width: fit-content;
   cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:focus,
   &:hover {
-    color: #fef9f9;
-    background: #54adff;
+    color:${({ theme }) => theme.color.bodyColor};
+    background-color:${({ theme }) => theme.color.btnDark};
   }
 `;
 
@@ -65,8 +67,9 @@ export const BtnNext = styled.button`
   font-size: 16px;
   font-weight: 700;
   line-height: 1.38;
-  color: #fef9f9;
-  background-color: #54adff;
+  color: ${({ theme }) => theme.color.bodyColor};
+  background-color: ${({ theme }) => theme.color.btnDark};
+ 
   border: none;
   border-radius: 40px;
   text-decoration: none;
@@ -79,6 +82,8 @@ export const BtnNext = styled.button`
   text-transform: none;
   gap: 12px;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
@@ -91,7 +96,7 @@ export const BtnPrev = styled.button`
   font-size: 16px;
   font-weight: 700;
   line-height: 1.38;
-  color: #54adff;
+  color: ${({ theme }) => theme.color.btnDark};
   background-color: transparent;
   border: none;
   text-decoration: none;
@@ -104,6 +109,8 @@ export const BtnPrev = styled.button`
   border-radius: 40px;
   cursor: pointer;
   gap: 12px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {

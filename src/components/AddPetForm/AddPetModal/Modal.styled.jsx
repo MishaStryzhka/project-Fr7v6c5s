@@ -41,6 +41,7 @@ export const BtnClose = styled.div`
   height: 100vh;
   background-color: var(--overlay-color);
   z-index: 100;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {

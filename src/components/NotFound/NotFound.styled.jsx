@@ -17,7 +17,7 @@ export const Title = styled.h2`
   font-size: 24px;
   line-height: 1.35;
   text-align: center;
-  color: #111111;
+  color: ${({ theme }) => theme.color.secondary};
   margin-right: auto;
   margin-left: auto;
   max-width: 280px;
@@ -55,8 +55,8 @@ export const Links = styled(Link)`
   border-radius: 40px;
   padding: 8px 28px 8px 28px;
   margin: 60px auto 0;
-  color: white;
-  background: #54adff;
+  color:${({ theme }) => theme.color.cardBG};
+  background: ${({ theme }) => theme.color.btnDark};
   display: flex;
   justify-content: center;
   align-items: center;

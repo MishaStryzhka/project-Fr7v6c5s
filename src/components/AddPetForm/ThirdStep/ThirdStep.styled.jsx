@@ -11,7 +11,7 @@ export const Title = styled.h2`
   line-height: 1.37;
   margin-bottom: 24px;
   margin-left: 20px;
-  color: #111111;
+  color:${({ theme }) => theme.color.secondary};
 
   @media screen and (min-width: 768px) {
     font-size: 28px;
@@ -55,7 +55,7 @@ export const SexPhotoBlock = styled.div`
 
 export const LabelSex = styled.p`
   font-family: Manrope;
-  color: #111111;
+  color:  ${({ theme }) => theme.color.secondary};
   font-weight: 500;
   font-size: 14px;
   line-height: 1.36;
@@ -79,20 +79,22 @@ export const SexLabelStyled = styled.label`
   background-color: inherit;
   cursor: pointer;
   border: none;
-  color: #888888;
-  background-color: ${props => (props.isActive ? '#54adff' : 'transparent')};
-  color: ${props => (props.isActive ? '#fff' : '#888888')};
+  color:  ${({ theme }) => theme.color.btnLogOut};
+  background-color: ${props => (props.isActive ? ({ theme }) => theme.color.btnDark : 'transparent')};
+  color: ${props => (props.isActive ? ({ theme }) => theme.color.cardBG : ({ theme }) => theme.color.btnLogOut)};
   font-size: 16px;
   align-items: center;
   line-height: 1.5;
   padding: 8px 16px;
   border-radius: 40px;
   align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
-    background-color: #54adff;
-    color: #fff;
+    background-color: ${({ theme }) => theme.color.btnDark};
+    color: ${({ theme }) => theme.color.cardBG};
   }
 `;
 
@@ -102,19 +104,21 @@ export const SexButton = styled.button`
   background-color: inherit;
   cursor: pointer;
   border: none;
-  color: #888888;
+  color: ${({ theme }) => theme.color.btnLogOut};
   font-size: 16px;
   align-items: center;
   line-height: 1.5;
   padding: 8px 16px;
   border-radius: 40px;
   gap: 12px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus,
   &:active {
-    background-color: #54adff;
-    color: #fff;
+    background-color:${({ theme }) => theme.color.btnDark} ;
+    color: ${({ theme }) => theme.color.cardBG} ;
   }
 `;
 
@@ -125,7 +129,7 @@ export const ErrorSex = styled.p`
   font-weight: 400;
   font-size: 10px;
   line-height: 1.36px;
-  color: #f43f5e;
+  color:${({ theme }) => theme.color.error};
 
   @media screen and (min-width: 768px) {
     bottom: 25%;
@@ -153,7 +157,7 @@ export const LabelAddPhoto = styled.p`
   font-size: 14px;
   line-height: 1.33;
   width: 85px;
-  color: #111111;
+  color: ${({ theme }) => theme.color.secondary};
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
@@ -169,7 +173,7 @@ export const LabelPhoto = styled.div`
   position: relative;
   width: 112px;
   height: 112px;
-  background-color: #cce4fb;
+  background-color: ${({ theme }) => theme.color.btnLight};
   border-radius: 20px;
   overflow: hidden;
 
@@ -184,7 +188,7 @@ export const LabelAddedPhoto = styled.label`
   position: relative;
   width: 112px;
   height: 112px;
-  background-color: #cce4fb;
+  background-color: ${({ theme }) => theme.color.btnLight};
   border-radius: 20px;
   overflow: hidden;
 
@@ -213,7 +217,7 @@ export const ErrorTextLowSell = styled.p`
   font-size: 10px;
   bottom: -10%;
   left: 15%;
-  color: #f43f5e;
+  color: ${({ theme }) => theme.color.error};
 
   @media screen and (min-width: 768px) {
     font-size: 12px;
@@ -235,7 +239,7 @@ export const InputContainer = styled.div`
 
 export const Label = styled.label`
   font-family: Manrope;
-  color: #111111;
+  color: ${({ theme }) => theme.color.secondary};
   font-weight: 500;
   font-size: 14px;
   line-height: 1.36;
@@ -248,10 +252,10 @@ export const Label = styled.label`
 export const Input = styled.input`
   font-family: Manrope;
   border-radius: 40px;
-  color: #888888;
+  color:${({ theme }) => theme.color.btnLogOut};
   font-size: 14px;
   padding: 8px 16px;
-  border: 1px solid #54adff;
+  border: 1px solid ${({ theme }) => theme.color.btnDark};
   max-width: 242px;
 
   &:not(:last-child) {
@@ -259,7 +263,7 @@ export const Input = styled.input`
   }
 
   &:focus {
-    border-color: #00c3ad;
+    border-color: ${({ theme }) => theme.color.indicator};
   }
 
   @media screen and (min-width: 768px) {
@@ -277,7 +281,7 @@ export const ErrorTextLostLocation = styled.p`
   font-weight: 400;
   font-size: 10px;
   line-height: 1.36px;
-  color: #f43f5e;
+  color: ${({ theme }) => theme.color.error};
 
   @media screen and (min-width: 768px) {
     bottom: 70%;
@@ -291,7 +295,7 @@ export const LabelCommentsSell = styled.label`
   font-weight: 500;
   font-size: 14px;
   line-height: 1.33px;
-  color: #111111;
+  color: ${({ theme }) => theme.color.secondary};
   margin-bottom: 8px;
   margin-top: 12px;
 
@@ -308,7 +312,7 @@ export const InputCommentsLost = styled.textarea`
   font-size: 14px;
   line-height: 1.5;
   padding: 12px 16px;
-  border: 1px solid #54adff;
+  border: 1px solid ${({ theme }) => theme.color.btnDark};
   border-radius: 20px;
   resize: none;
   outline: none;
@@ -328,7 +332,7 @@ export const ErrorCommentSell = styled.p`
   font-weight: 400;
   font-size: 10px;
   line-height: 1.36px;
-  color: #f43f5e;
+  color: ${({ theme }) => theme.color.error};
 
   @media screen and (min-width: 768px) {
     position: absolute;
@@ -359,7 +363,7 @@ export const ErrorTextLow = styled.p`
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  color: #f43f5e;
+  color: ${({ theme }) => theme.color.error};
 
   @media screen and (min-width: 768px) {
     bottom: 25%;
@@ -374,7 +378,7 @@ export const ErrorComment = styled.p`
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  color: #f43f5e;
+  color: ${({ theme }) => theme.color.error};
 `;
 
 export const CommentsContainerMyPet = styled.div`
@@ -392,7 +396,7 @@ export const LabelComments = styled.label`
   font-weight: 500;
   font-size: 14px;
   line-height: 1.33px;
-  color: #111111;
+  color: ${({ theme }) => theme.color.secondary};
   margin-bottom: 8px;
 
   @media screen and (min-width: 768px) {
@@ -408,7 +412,7 @@ export const InputComments = styled.textarea`
   font-size: 14px;
   line-height: 1.5;
   padding: 12px 16px;
-  border: 1px solid #54adff;
+  border: 1px solid ${({ theme }) => theme.color.btnDark};
   border-radius: 20px;
   resize: none;
   outline: none;
@@ -433,7 +437,7 @@ export const ErrorTextPrice = styled.p`
   font-weight: 400;
   font-size: 10px;
   line-height: 1.36px;
-  color: #f43f5e;
+  color: ${({ theme }) => theme.color.error};
 
   @media screen and (min-width: 768px) {
     bottom: 38%;
@@ -450,7 +454,7 @@ export const ErrorTextSellLocation = styled.p`
   font-weight: 400;
   font-size: 10px;
   line-height: 1.36px;
-  color: #f43f5e;
+  color:${({ theme }) => theme.color.error};
 
   @media screen and (min-width: 768px) {
     bottom: 70%;

@@ -171,12 +171,12 @@ export const RegisterBtn = styled.button`
   line-height: 1.35;
 
   letter-spacing: 0.04em;
-
-  color: #ffffff;
+  
+  color:${({ theme }) => theme.color.cardBG};
   cursor: pointer;
 
   :hover {
-    background: ${({ theme }) => theme.color.gradient};
+    background: ${({ theme }) => theme.color.gradient} !important;
   }
 
   @media screen and (max-width: 767px) {
@@ -190,7 +190,7 @@ export const LoginText = styled.p`
   font-size: 12px;
   line-height: 1.3;
   letter-spacing: 0.04em;
-  color: #888888;
+  color:${({ theme }) => theme.color.btnLogOut};
 `;
 
 export const LoginLink = styled(Link)`

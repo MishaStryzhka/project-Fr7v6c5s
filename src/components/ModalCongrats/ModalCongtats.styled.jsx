@@ -14,7 +14,7 @@ export const Title = styled.h2`
   font-size: 24px;
   line-height: 33px;
   text-align: center;
-  color: #111111;
+  color:${({ theme }) => theme.color.secondary};
   margin-top: 68px;
 
   @media screen and (min-width: 768px) {
@@ -33,7 +33,7 @@ export const Text = styled.p`
   margin-bottom: 40px;
   text-align: center;
   letter-spacing: 0.04em;
-  color: #111111;
+  color:${({ theme }) => theme.color.secondary};
 
   @media screen and (min-width: 768px) {
     font-size: 24px;
