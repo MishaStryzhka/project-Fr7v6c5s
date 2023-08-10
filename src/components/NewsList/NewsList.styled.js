@@ -113,7 +113,6 @@ export const CardTitle = styled.h2`
 
 export const CardText = styled.p`
   text-overflow: ellipsis;
-  white-space: nowrap;
   font-family: Manrope;
   font-size: 16px;
   font-style: normal;
